@@ -74,10 +74,8 @@ const render = async (ctx, next) => {
   next();
 }
 
-router
-.get('/', render)
-.get('/home', render)
-.get('/item', render);
+router.get('/(.*)', render);
+
 
 // 加载路由组件
 app
